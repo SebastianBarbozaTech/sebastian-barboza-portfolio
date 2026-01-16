@@ -10,7 +10,9 @@ Testing realizado sobre una **aplicación web brindada**.
 - Reporte y seguimiento de incidencias
 - Regresión
 
-➡️ Carpeta: `/jap` 
+➡️ Carpeta: [`/jap`](jap)  
+➡️ Documentación: [`/docs/jap`](docs/jap)
+
 
 ### 2) Proyecto Final Tecnicatura — ASUR
 Aplicación desarrollada end-to-end con enfoque en **frontend, backend y QA**.
@@ -18,12 +20,13 @@ Aplicación desarrollada end-to-end con enfoque en **frontend, backend y QA**.
 - Evidencias y documentación
 - Reporte/seguimiento de bugs
 
-➡️ Carpeta: `/asur`
+➡️ Carpeta: [`/asur`](asur)  
+➡️ Evidencias: [`/docs/asur`](docs/asur)
 
 ### 3) Tienda (Proyecto personal)
 Proyecto frontend realizado con **HTML, CSS y JavaScript** (en mejora continua).
 - Demo: https://tiendasb.netlify.app/
-➡️ Carpeta: `/tienda` 
+➡️ Carpeta: [`/tienda`](tienda)
 
 ### 4) Documentación (Docs)
 Carpeta con material de soporte para evaluación (no código): evidencias, capturas, reportes y documentación.
