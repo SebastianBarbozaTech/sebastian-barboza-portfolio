@@ -1,3 +1,8 @@
-# Evidencias JaP (Testing)
+# JaP - Documentación y evidencias (Testing)
 
-En esta carpeta se guarda la documentación del trabajo de testing realizado sobre una **aplicación web brindada acerca de una Vetrerinaria**.
+Documentación del trabajo de testing realizado sobre una **aplicación web brindada de Veterinaria**.
+
+## Contenido
+- Casos de prueba
+- Evidencias (capturas)
+- Reporte / conclusiones
