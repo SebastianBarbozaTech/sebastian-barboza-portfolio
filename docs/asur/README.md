@@ -1,9 +1,8 @@
-# ASUR - Documentación y evidencias
+# ASUR — Entrega final
 
-Evidencias y documentación del **Proyecto Final de Tecnicatura (ASUR)**.
+Documentación y evidencias organizadas por área:
 
-## Qué podés encontrar acá
-- Evidencias (capturas) de funcionalidades y pruebas
-- Reporte/seguimiento de bugs o incidencias 
-- Casos de prueba 
-- Documentación breve del sistema 
+- 🧪 Testing: [Ver carpeta](Testing)
+- 💻 Programación: [Ver carpeta](Programación)
+- 🗄️ Base de Datos: [Ver carpeta](Base%20de%20Datos)
+- 📋 Gestión de Proyecto: [Ver carpeta](Gestion%20de%20Proyecto)
