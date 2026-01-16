@@ -22,6 +22,7 @@ Aplicación desarrollada end-to-end con enfoque en **frontend, backend y QA**.
 
 ### 3) Tienda (Proyecto personal)
 Proyecto frontend realizado con **HTML, CSS y JavaScript** (en mejora continua).
+- Demo: https://tiendasb.netlify.app/
 ➡️ Carpeta: `/tienda` 
 
 ### 4) Documentación (Docs)
