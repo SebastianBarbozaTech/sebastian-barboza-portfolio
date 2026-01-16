@@ -1,2 +1,9 @@
 # Tienda — Proyecto personal
-Frontend con HTML, CSS y JavaScript. En mejora continua (UI, responsive y funcionalidades).
+
+Proyecto frontend desarrollado con **HTML, CSS y JavaScript**.
+
+## Demo
+- Netlify: [https://tiendasb.netlify.app/](https://tiendasb.netlify.app/)
+
+## Nota
+Proyecto en mejora continua (UI, responsive y funcionalidades).
