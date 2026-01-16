@@ -30,8 +30,8 @@ Proyecto frontend realizado con **HTML, CSS y JavaScript** (en mejora continua).
 
 ### 4) Documentación (Docs)
 Carpeta con material de soporte para evaluación (no código): evidencias, capturas, reportes y documentación.
-- JaP (Testing): `/docs/jap`
-- ASUR (Evidencias): `/docs/asur`
+- JaP (Testing): [`/docs/jap`](docs/jap)
+- ASUR (Evidencias): [`/docs/asur`](docs/asur)
 
 ## 🧰 Tecnologías
 - Testing: TestLink, Jira, Postman
