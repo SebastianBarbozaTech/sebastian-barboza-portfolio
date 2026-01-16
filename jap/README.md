@@ -10,4 +10,5 @@ Este trabajo corresponde a **testing y documentación** sobre una **aplicación 
 - Incidencias / reporte
 - Conclusiones
 
-📁 Evidencias: `/docs/jap`
+## Documentación y evidencias
+📁 Todo el material está en: [`/docs/jap`](../docs/jap)
