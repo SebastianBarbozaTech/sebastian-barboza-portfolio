@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Vacunas - Veterinaria</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5dc; /* Color de fondo suave */
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+        .logo-section {
+            flex: 1;
+            background-color: #7ed957; /* Color de fondo para la sección del logo */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .logo-section img {
+            max-width: 80%;
+            height: auto;
+        }
+        .form-section {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .form-container {
+            width: 100%;
+            max-width: 400px;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333333;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .button-group button {
+            width: 48%;
+            padding: 10px;
+            background-color: #7ed957;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .button-group button:hover {
+            background-color: #529b33;
+        }
+        .error {
+            color: red;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sección del Logo -->
+        <div class="logo-section">
+            <img src="logo.png" alt="Logo Veterinaria">
+        </div>
+
+        <!-- Sección del Formulario -->
+        <div class="form-section">
+            <div class="form-container">
+                <h2>Registro de Vacunas</h2>
+                <div id="error" class="error"></div>
+                <form id="vacunaForm">
+                    <label for="vacunaNombre">Nombre de la Vacuna:</label>
+                    <input type="text" id="vacunaNombre" required>
+
+                    <label for="dosis">Dosis:</label>
+                    <input type="text" id="dosis" required>
+
+                    <label for="fecha">Fecha de Aplicación:</label>
+                    <input type="date" id="fecha" required>
+
+                    <label for="vencimiento">Fecha de Vencimiento:</label>
+                    <input type="date" id="vencimiento" required>
+
+                    <div class="button-group">
+                        <button type="button" onclick="cancelarVacuna()">Cancelar</button>
+                        <button type="submit">Salvar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('vacunaForm').addEventListener('submit', function(e){
+            e.preventDefault();
+            const nombre = document.getElementById('vacunaNombre').value.trim();
+            const dosis = document.getElementById('dosis').value.trim();
+            const fecha = document.getElementById('fecha').value;
+            const vencimiento = document.getElementById('vencimiento').value;
+            if(nombre && dosis && fecha && vencimiento){
+                alert("Vacuna registrada exitosamente.");
+                window.location.href = "registro_mascota.html"; // O la página que corresponda
+            } else {
+                document.getElementById('error').innerText = "Por favor, complete todos los campos de la vacuna.";
+            }
+        });
+
+        function cancelarVacuna(){
+            document.getElementById('vacunaForm').reset();
+            window.location.href = "registro_mascota.html";
+        }
+    </script>
+</body>
+</html>

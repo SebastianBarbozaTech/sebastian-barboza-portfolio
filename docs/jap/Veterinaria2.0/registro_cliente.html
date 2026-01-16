@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Nuevo Cliente - Veterinaria</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6f7ff; /* Color de fondo suave */
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+        .logo-section {
+            flex: 1;
+            background-color: #7ed957; /* Color de fondo para la sección del logo */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .logo-section img {
+            max-width: 80%;
+            height: auto;
+        }
+        .form-section {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .form-container {
+            width: 100%;
+            max-width: 500px;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333333;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .button-group button {
+            width: 48%;
+            padding: 10px;
+            background-color: #7ed957;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .button-group button:hover {
+            background-color: #529b33;
+        }
+        .error {
+            color: red;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sección del Logo -->
+        <div class="logo-section">
+            <img src="logo.png" alt="Logo Veterinaria">
+        </div>
+
+        <!-- Sección del Formulario -->
+        <div class="form-section">
+            <div class="form-container">
+                <h2>Registro de Nuevo Cliente</h2>
+                <div id="error" class="error"></div>
+                <form id="clienteForm">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" required>
+
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" required>
+
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" required>
+
+                    <label for="direccion">Dirección:</label>
+                    <textarea id="direccion" rows="3" required></textarea>
+
+                    <label>
+                        <input type="checkbox" id="ingresarMascota"> Ingresar Mascota
+                    </label>
+
+                    <div class="button-group">
+                        <button type="submit">Registrar Cliente</button>
+                        <button type="button" onclick="irRegistroMascota()">Registrar Mascota</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('clienteForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Validación simple
+            const nombre = document.getElementById('nombre').value.trim();
+            const apellido = document.getElementById('apellido').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const direccion = document.getElementById('direccion').value.trim();
+            if(nombre && apellido && email && direccion){
+                alert("Cliente registrado exitosamente.");
+                window.location.href = "login.html";
+            } else {
+                document.getElementById('error').innerText = "Por favor, complete todos los campos.";
+            }
+        });
+
+        function irRegistroMascota(){
+            window.location.href = "registro_mascota.html";
+        }
+    </script>
+</body>
+</html>

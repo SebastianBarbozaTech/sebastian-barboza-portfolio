@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Mascota - Veterinaria</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff0f5; /* Color de fondo suave */
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+        .logo-section {
+            flex: 1;
+            background-color: #7ed957; /* Color de fondo para la sección del logo */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .logo-section img {
+            max-width: 80%;
+            height: auto;
+        }
+        .form-section {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .form-container {
+            width: 100%;
+            max-width: 500px;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2, h3 {
+            text-align: center;
+            color: #333333;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .button-group button {
+            width: 48%;
+            padding: 10px;
+            background-color: #7ed957;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .button-group button:hover {
+            background-color: #529b33;
+        }
+        .error {
+            color: red;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sección del Logo -->
+        <div class="logo-section">
+            <img src="logo.png" alt="Logo Veterinaria">
+        </div>
+
+        <!-- Sección del Formulario -->
+        <div class="form-section">
+            <div class="form-container">
+                <h2>Registro de Mascota</h2>
+                <div id="error" class="error"></div>
+                <form id="mascotaForm">
+                    <label for="mascotaNombre">Nombre:</label>
+                    <input type="text" id="mascotaNombre" required>
+
+                    <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+                    <input type="date" id="fechaNacimiento" required>
+
+                    <label for="especie">Especie:</label>
+                    <input type="text" id="especie" required>
+
+                    <div class="button-group">
+                        <button type="button" onclick="cancelarMascota()">Cancelar</button>
+                        <button type="submit">Registrar Mascota</button>
+                    </div>
+                </form>
+
+                <div class="button-group" style="margin-top: 10px;">
+                    <button type="button" onclick="irRegistroVacunas()">Registrar Vacunas</button>
+                </div>
+
+                <div id="mascotaError" class="error"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('mascotaForm').addEventListener('submit', function(e){
+            e.preventDefault();
+            const mNombre = document.getElementById('mascotaNombre').value.trim();
+            const mFecha = document.getElementById('fechaNacimiento').value;
+            const mEspecie = document.getElementById('especie').value.trim();
+            if(mNombre && mFecha && mEspecie){
+                alert("Mascota registrada exitosamente.");
+                window.location.href = "registro_cliente.html";
+            } else {
+                document.getElementById('mascotaError').innerText = "Por favor, complete todos los campos de la mascota.";
+            }
+        });
+
+        function cancelarMascota(){
+            document.getElementById('mascotaForm').reset();
+            window.location.href = "registro_cliente.html";
+        }
+
+        function irRegistroVacunas(){
+            window.location.href = "registro_vacunas.html";
+        }
+    </script>
+</body>
+</html>
