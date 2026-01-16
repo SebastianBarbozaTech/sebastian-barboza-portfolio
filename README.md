@@ -24,6 +24,11 @@ Aplicación desarrollada end-to-end con enfoque en **frontend, backend y QA**.
 Proyecto frontend realizado con **HTML, CSS y JavaScript** (en mejora continua).
 ➡️ Carpeta: `/tienda` 
 
+### 4) Documentación (Docs)
+Carpeta con material de soporte para evaluación (no código): evidencias, capturas, reportes y documentación.
+- JaP (Testing): `/docs/jap`
+- ASUR (Evidencias): `/docs/asur`
+
 ## 🧰 Tecnologías
 - Testing: TestLink, Jira, Postman
 - Frontend: HTML, CSS, JavaScript, React, TypeScript
